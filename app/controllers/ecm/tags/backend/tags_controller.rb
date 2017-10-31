@@ -4,10 +4,12 @@ module Ecm::Tags::Backend
       Ecm::Tags::Tag
     end
 
+    respond_to :js
+
     private
 
     def permitted_params
-      params.require(:tag).permit(:name)
+      params.require(:tag).permit(:name, :color)
     end
   end
 end

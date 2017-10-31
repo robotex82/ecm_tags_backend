@@ -1,5 +1,5 @@
-= form.association :tag
-= form.input(:taggable, collection: Ecm::Tags::Backend.taggable_class_names.map(&:constantize),
+= form.input :tag
+= form.input(:taggable, :collection => [ Ecm::Pictures::PictureGallery, Ecm::Pictures::Picture ],
                       as: :grouped_select,
                       group_method: :all,
                       group_label_method: :model_name,
@@ -7,7 +7,7 @@
                       label_method: :human,
                       include_blank: true,
                       selected: form.object.taggable.try(:to_global_id))
-= form.input(:tagger, collection: Ecm::Tags::Backend.tagger_class_names.map(&:constantize),
+= form.input(:tagger, :collection => [ Ecm::UserArea::User ],
                       as: :grouped_select,
                       group_method: :all,
                       group_label_method: :model_name,

@@ -16,6 +16,9 @@ module Ecm
         mattr_accessor :registered_services do
           -> { [] }
         end
+
+        mattr_accessor(:taggable_class_names) { [] }
+        mattr_accessor(:tagger_class_names)   { [] }
       end
     end
   end
