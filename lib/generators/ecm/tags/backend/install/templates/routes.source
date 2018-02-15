@@ -1,3 +1,5 @@
 
-
-  mount Ecm::Tags::Backend::Engine, at: '/backend/ecm-tags-backend-engine'
+  
+  localized do
+    mount Ecm::Tags::Backend::Engine, at: '/backend/ecm-tags-backend-engine'
+  end
